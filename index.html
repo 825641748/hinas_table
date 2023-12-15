@@ -180,29 +180,7 @@
 			    
 				let diyList = document.getElementsByClassName("diy");
 				for (let item of diyList) {
-				// 	item.addEventListener("contextmenu", (e) => {
-				// 		event.preventDefault();
-				// 		let result = confirm("确定要删除吗？"); // 显示确认对话框
-				// 		if (result) {
-				// 			//执行删除操作
-				// 			let src = item.getAttribute("src").split("_");
-				// 			let html = src[0].replace("img/png/", "icons_") + "/" + src[1] + ".html";
-				// 			let png = item.getAttribute("src");
-    //                         fetch('controller.php?filename=' + png)
-				// 				.catch(error => {
-				// 					console.error('Error:', error);
-				// 				});
-				// 			fetch('controller.php?filename=' + html)
-				// 				.catch(error => {
-				// 					console.error('Error:', error);
-				// 				});
-							
-				// 			setTimeout(()=>{
-				// 			    location.reload();
-				// 			},1500);
-				// 		}
-
-				// 	})
+				
 					let longPressTimeout;  
   
                     // 监听鼠标按下事件  
