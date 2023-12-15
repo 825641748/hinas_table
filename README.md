@@ -8,9 +8,10 @@
 ![image](https://github.com/825641748/hinas_table/assets/65830755/6ce5368d-b657-41c8-ad45-54dbe6c67fe6)
 
 ## 添加示例
-![image](https://github.com/825641748/hinas_table/assets/65830755/97ed9c1d-ffd9-4192-947f-3b891f8a66af)
-![image](https://github.com/825641748/hinas_table/assets/65830755/b569c2c8-97fc-4f36-b584-213ff9c9dd84)
-![image](https://github.com/825641748/hinas_table/assets/65830755/b3ee306a-c095-412b-9931-8d04556c5270)
+![image](https://github.com/825641748/hinas_table/assets/65830755/7ee56d33-2c04-4633-be9e-f4c674f09989)
+![image](https://github.com/825641748/hinas_table/assets/65830755/b215725b-a3f5-407c-aa47-fce6fec6ab3e)
+![image](https://github.com/825641748/hinas_table/assets/65830755/6c315530-a9d4-4f06-a7ab-0e6289db0ac5)
+
 
 
 ## 参数说明
