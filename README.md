@@ -1,1 +1,21 @@
-# hinas_table
+# 海纳斯桌面——图标自定义功能扩展(只需两步就能一劳永逸)
+## 1、使用项目中的相应文件替换原有文件，增加controller.php
+![image](https://github.com/825641748/hinas_table/assets/65830755/bc1139d8-208f-4c84-b9d1-249340fdf7dd)
+![image](https://github.com/825641748/hinas_table/assets/65830755/368bd6c2-c9a6-41d2-bb20-214b0757b848)
+## 2、为文件夹增加写入权限
+![image](https://github.com/825641748/hinas_table/assets/65830755/5054f3e4-2b66-4a16-8864-7626c818b7c2)
+## 效果图
+
+## 参数说明
+![image](https://github.com/825641748/hinas_table/assets/65830755/d2004043-4663-4b7d-8585-4ed31f66fed5)
+
+
+## 长按自定义图标可以删除，为防止误操作，默认图标不可删
+## 已优化原有页面样式，自定义图标理论上无数量限制
+
+
+
+
+
+
+
