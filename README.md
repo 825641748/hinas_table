@@ -4,7 +4,11 @@
 ![image](https://github.com/825641748/hinas_table/assets/65830755/368bd6c2-c9a6-41d2-bb20-214b0757b848)
 ## 2、为文件夹增加写入权限
 ![image](https://github.com/825641748/hinas_table/assets/65830755/5054f3e4-2b66-4a16-8864-7626c818b7c2)
-## 效果图
+## 添加示例
+![image](https://github.com/825641748/hinas_table/assets/65830755/97ed9c1d-ffd9-4192-947f-3b891f8a66af)
+![image](https://github.com/825641748/hinas_table/assets/65830755/b569c2c8-97fc-4f36-b584-213ff9c9dd84)
+![image](https://github.com/825641748/hinas_table/assets/65830755/b3ee306a-c095-412b-9931-8d04556c5270)
+
 
 ## 参数说明
 ![image](https://github.com/825641748/hinas_table/assets/65830755/d2004043-4663-4b7d-8585-4ed31f66fed5)
