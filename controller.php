@@ -180,7 +180,7 @@ if(isset($_GET['filename'])) {
   
     // 检查跳转路径是否为空  
     if (redirectInput.value.trim() === "") {  
-      alert("请填写跳转路径！");  
+      alert("请填写链接！");  
       redirectInput.focus();  
       return false;  
     }  
