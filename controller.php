@@ -109,6 +109,7 @@ if(isset($_POST["submit"])) {
                 file_put_contents($infoFilePath, $data);
 
                 echo "文件上传成功并数据写入成功！".(filter_var($redirect, FILTER_VALIDATE_URL)?'':'http://<?php echo $lanip ?>').$redirect;
+		echo "<script>window.location.href='/index.html#'+new Date().getTime();</script>";
             } else {
                 echo "文件大小超过限制！";
             }
