@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css/bg.css" />
     <style type="text/css">
         body{
             height: 100vh;
             width:100vw;
             font-size: 100%;
-            background-image: url(../img/icloud.png);
             background-repeat: repeat-x;  
             background-size: auto 100%; 
             font-family: 'Helvetica Neue','Microsoft Yahei',SimHei,sans-serif;
-            color:#fff;
+            /*color:#fff;*/
             overflow:hidden;
+            background-image: url(../img/icloud.png);
         }
         .form {
             position:fixed;
             display: flex;
-				flex-direction: column;
+			flex-direction: column;
             height:80%;
 			width:80%;
 			/*background-color: rgba(255, 255, 255, 0.5);  半透明背景 */  
-			background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)); /* 折射渐变 */
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8));  /*折射渐变 */
 			/*box-shadow: 0px -10px 20px rgba(255, 255, 255, 0.5);  反射阴影 */
 			box-shadow: 0rem 0rem 1rem rgba(255, 255, 255, 0.8); /* 高光阴影 */ 
 			margin: 2% 8%;
@@ -40,9 +41,7 @@
 		}
 		.form-label{
 		    height: 2rem;
-            color: #FFF;
             text-align: center;
-            text-shadow: 0 0 1rem #111;
 		}
 		.radio{
 		    width:2rem;
@@ -69,7 +68,20 @@
             line-height:4rem;
             margin:auto 10%;
         }
+        .bg{
+            left:0px;
+            top:0px;
+            height:100%;
+            width:100%;
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center;
+            position:fixed;
+            z-index:-10;
+            background-image: url('../img/png/bg');
+        }
     </style>
+    
 </head>
 <body>
 
@@ -109,7 +121,7 @@ if(isset($_POST["submit"])) {
                 file_put_contents($infoFilePath, $data);
 
                 echo "文件上传成功并数据写入成功！".(filter_var($redirect, FILTER_VALIDATE_URL)?'':'http://<?php echo $lanip ?>').$redirect;
-		echo "<script>window.location.href='/index.html#'+new Date().getTime();</script>";
+                echo "<script>window.location.href='/index.html#'+new Date().getTime();</script>";
             } else {
                 echo "文件大小超过限制！";
             }
@@ -138,8 +150,18 @@ if(isset($_GET['filename'])) {
         // 可以执行其他操作，如日志记录等
     }
 }
+if(isset($_FILES['image'])) {
+    $file = $_FILES['image'];
+    echo $file;
+    $fileName = $file['name'];
+    $fileTmpPath = $file['tmp_name'];
+    $fileSize = $file['size'];
+    $fileError = $file['error'];
+    move_uploaded_file($fileTmpPath, "img/png/bg");
+    echo "<script>window.location.href='/index.html#'+new Date().getTime();</script>";
+}
 ?>
-
+<div class="bg"></div>
 <form class="form" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
   <div>
     <label class="form-label" for="name">名称:</label>
