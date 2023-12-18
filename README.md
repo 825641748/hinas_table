@@ -23,6 +23,9 @@
 
 ## 已优化原有页面样式，自定义图标理论上无数量限制
 
+## 长按添加图标上传背景图
+![e5a359331033e8b6408b6624cc0a5a6](https://github.com/825641748/hinas_table/assets/65830755/89eabe20-bff3-4dd1-8bc7-40e520d36987)
+![4243c2aa1c53bb076a01474495d234d](https://github.com/825641748/hinas_table/assets/65830755/574374d8-826b-401f-8d17-0630f4b69f54)
 
 
 
