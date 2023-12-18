@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/bg.css" />
 		<title>海纳思系统</title>
 		<style>
 			.adleft {
@@ -55,7 +56,7 @@
 			.shake{
 			    width:128px;
 			    height:128px;
-			    border-radius:32px;
+			    border-radius:1.5rem;
 			    overflow:hidden;
 			}
 			#footer{
@@ -63,6 +64,20 @@
 			    bottom:0px;
 			    
 			}
+			.bg{
+			    height:100%;
+                width:100%;
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position: center;
+                position:fixed;
+                z-index:-10;
+                background-image: url('../img/png/bg');
+			}
+			/* 隐藏垂直滚动条 */
+            body::-webkit-scrollbar {
+              width: 0;
+            }
 		</style>
 	</head>
 
@@ -70,7 +85,7 @@
 		<?php
 	$lanip=$_SERVER["HTTP_HOST"];
 ?>
-
+        <div class="bg"></div>
 		<div id="wrap">
 			<div id="top">
 				<div id="logo">
@@ -90,7 +105,18 @@
 				<div id="app" class="app animated fadeInLeft">
 					<ul>
 						<li>
-							<a href="/zhinan.html" target="_blank"><img class="shake" src="img/png/zhinan.png" /><strong>系统使用说明</strong></a>
+							<?php
+						$file_path = '/etc/zhinan/zhinan';
+						$default_image = 'zhinan1.png';
+						// 检查文件是否存在
+						if (!file_exists($file_path)) {
+						// 如果文件不存在，则显示默认图片和链接
+						echo '<a href="/zhinan.html" target="_blank"><img class="shake" src="img/png/' . $default_image . '" /><strong>系统使用说明</strong></a>';
+						} else {
+						// 如果文件存在，则显示zhinan.png和链接
+						echo '<a href="/zhinan.html" target="_blank"><img class="shake" src="img/png/zhinan.png" /><strong>系统使用说明</strong></a>';
+						}
+						?>
 						</li>
 						<li>
 							<a href="/phpinfo.php" target="_blank"><img class="shake"
@@ -126,7 +152,18 @@
 				<div id="app1" class="app animated fadeInRight">
 					<ul>
 						<li>
-							<a href="/zhinan.html" target="_blank"><img class="shake" src="img/png/zhinan.png" /><strong>系统使用说明</strong></a>
+							<?php
+						$file_path = '/etc/zhinan/zhinan';
+						$default_image = 'zhinan1.png';
+						// 检查文件是否存在
+						if (!file_exists($file_path)) {
+						// 如果文件不存在，则显示默认图片和链接
+						echo '<a href="/zhinan.html" target="_blank"><img class="shake" src="img/png/' . $default_image . '" /><strong>系统使用说明</strong></a>';
+						} else {
+						// 如果文件存在，则显示zhinan.png和链接
+						echo '<a href="/zhinan.html" target="_blank"><img class="shake" src="img/png/zhinan.png" /><strong>系统使用说明</strong></a>';
+						}
+						?>
 						</li>
 						<li>
 							<a href="https://bbs.histb.com" target="_blank"><img class="shake"
@@ -139,7 +176,7 @@
                         }
 						?>
 						<li>
-							<a href="/controller.php"><img class="shake"
+							<a href="/controller.php" id="add"><img class="shake"
 									src="img/png/add.png" /><strong>添加图标</strong></a>
 						</li>
 					</ul>
@@ -158,6 +195,9 @@
 				</div>
 			</div>
 		</div>
+		<form id="form" action="controller.php" style="display: none;" method="post" enctype="multipart/form-data">
+			<input type="file" id="image" name="image">  
+		</form>
 		<script src="js/jquery.min.js"></script>
 		<script>
 			$('button').click(function() {
@@ -180,9 +220,7 @@
 			    
 				let diyList = document.getElementsByClassName("diy");
 				for (let item of diyList) {
-				
 					let longPressTimeout;  
-  
                     // 监听鼠标按下事件  
                     item.addEventListener('mousedown', (event) => {  
                         longPressTimeout = setTimeout(() => {  
@@ -216,6 +254,30 @@
                         clearTimeout(longPressTimeout);  
                     });
 				}
+				let add = document.getElementById("add");
+				let longPressTimeout;  
+                // 监听鼠标按下事件  
+                add.addEventListener('mousedown', (event) => {  
+                    longPressTimeout = setTimeout(() => {  
+                        console.log('长按事件触发');  
+                        // 在这里添加你的长按事件处理代码  
+                        event.preventDefault();
+                        document.getElementById("image").click();
+						document.getElementById('image').addEventListener('change', function(e) {  
+                          var file = e.target.files[0];  
+                          if (file) {  
+                            var fileName = file.name; // 这就是文件名  
+                            console.log(fileName); // 在控制台打印文件名  
+                            document.getElementById("form").submit();
+                          }  
+                        }); 
+                    }, 1000); // 这里设置的是1秒，你可以根据需要调整  
+                });  
+                  
+                // 监听鼠标抬起事件  
+                add.addEventListener('mouseup', (event) => {  
+                    clearTimeout(longPressTimeout);  
+                });
 			}
 		</script>
 	</body>
