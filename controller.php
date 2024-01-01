@@ -133,7 +133,7 @@ if(isset($_POST["submit"])) {
 
 //$filePath = '/'; // 设置要删除的目录路径
 
-if(isset($_GET['filename'])) {
+else if(isset($_GET['filename'])) {
     $filename = $_GET['filename'];
     $fileToDelete = $filename;
 
@@ -150,7 +150,7 @@ if(isset($_GET['filename'])) {
         // 可以执行其他操作，如日志记录等
     }
 }
-if(isset($_FILES['image'])) {
+else if(isset($_FILES['image'])) {
     $file = $_FILES['image'];
     echo $file;
     $fileName = $file['name'];
