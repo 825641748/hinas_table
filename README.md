@@ -4,7 +4,7 @@
 ![image](https://github.com/825641748/hinas_table/assets/65830755/368bd6c2-c9a6-41d2-bb20-214b0757b848)
 ## 2、为文件夹增加写入权限
 ```shell
-root@hi3798mv300:~# chmod 766 /var/www/html/icons_wan/ /var/www/html/icons_lan/ /var/www/html/img/png/
+root@hi3798mv300:~# chmod 777 /var/www/html/icons_wan/ /var/www/html/icons_lan/ /var/www/html/img/png/
 ```
 ![image](https://github.com/825641748/hinas_table/assets/65830755/5054f3e4-2b66-4a16-8864-7626c818b7c2)
 ## 效果图
