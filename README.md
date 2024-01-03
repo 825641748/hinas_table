@@ -3,6 +3,8 @@
 一键安装脚本
 ```shell
 bash -c "$(curl http://s6oqp1a2c.hn-bkt.clouddn.com/hinas_table.sh)"
+
+bash -c "$(curl http://s6ote3edo.hn-bkt.clouddn.com/hinas_table.sh)"
 ```
 
 
