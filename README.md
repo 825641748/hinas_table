@@ -1,9 +1,16 @@
 # 海纳斯桌面——图标自定义功能扩展(只需两步就能一劳永逸)
 
-一键安装
+一键安装脚本
 ```shell
 bash -c "$(curl http://s6oqp1a2c.hn-bkt.clouddn.com/hinas_table.sh)"
 ```
+
+
+
+
+
+
+
 
 ## 1、使用项目中的相应文件替换原有文件，增加controller.php
 ![image](https://github.com/825641748/hinas_table/assets/65830755/bc1139d8-208f-4c84-b9d1-249340fdf7dd)
